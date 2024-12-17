@@ -177,6 +177,6 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/armaan-khan1/"
+    link: "www.linkedin.com/in/armaan-khan1"
   },
 ];
