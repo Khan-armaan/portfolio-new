@@ -143,7 +143,6 @@ export const testimonials = [
       { name: "Postman", icon: "/postman-icon.svg" },
       { name: "Bash", icon: "/bash.svg" },
       { name: "Github", icon: "/github.svg" },
-      { name: "Git", icon: "/git.svg" },
       { name: "Docker", icon: "/dockerName.svg" }
       
     ]
