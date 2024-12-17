@@ -122,13 +122,12 @@ export const testimonials = [
       { name: "Node.js", icon: "/nodejs-original-wordmark.svg" },
       { name: "Hono", icon: "/hono.svg" },
       { name: "Prisma", icon: "/prisma.svg" },
-      { name: "MongoDB", icon: "/mongo.svg" },
       { name: "TypeScript", icon: "/ts.svg" },
       { name: "Next.js", icon: "/next.svg" },
     ]
   },
   {
-    category: "Database",
+    category: "Databases",
     technologies: [
       { name: "PostgreSQL", icon: "/postgresql.svg" },
       { name: "MongoDB", icon: "/mongo.svg" }
@@ -142,7 +141,7 @@ export const testimonials = [
       { name: "Turborepo", icon: "/turborepo-icon.svg" },
       { name: "Git", icon: "/git.svg" },
       { name: "Postman", icon: "/postman-icon.svg" },
-      { name: "Linux", icon: "/linux-tux.svg" },
+      { name: "Bash", icon: "/bash.svg" },
       { name: "Github", icon: "/github.svg" },
       { name: "Git", icon: "/git.svg" },
       { name: "Docker", icon: "/dockerName.svg" }
