@@ -103,7 +103,7 @@ export const projects = [
     title: "CorbettRoar.com",
     des: " Corbett Roar Website - A simple website for booking jungle safaris and Corbett trips.",
 
-    img: "/CorbettRoar.png",
+    img: "/corbettRoar.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/hono.svg","/prisma.svg","/postgresql.svg"],
     link: "https://corbettroar.com/",
   },
