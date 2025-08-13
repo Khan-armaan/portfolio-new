@@ -26,12 +26,10 @@ import { cn } from "@/lib/utils";
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
+      const prev = scrollYProgress.getPrevious?.() ?? 0;
+      let direction = current - prev;
       if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
         setVisible(true);
       } else {
         if (direction < 0) {
@@ -45,28 +43,17 @@ import { cn } from "@/lib/utils";
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
+      <motion.nav
+        initial={{ opacity: 1, y: -100 }}
+        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
+        aria-label="Main navigation"
         className={cn(
-       
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-8 inset-x-0 mx-auto px-10 py-4 rounded-2xl border border-white/10 shadow-lg items-center justify-center gap-6 bg-gradient-to-r from-[#181c2b]/90 via-[#23263a]/90 to-[#181c2b]/90 backdrop-blur-xl",
           className
         )}
         style={{
-          backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.75)",
-          borderRadius: "12px",
-          border: "1px solid rgba(255, 255, 255, 0.125)",
+          border: "1.5px solid rgba(255,255,255,0.10)",
         }}
       >
         {navItems.map((navItem: any, idx: number) => (
@@ -74,17 +61,17 @@ import { cn } from "@/lib/utils";
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative flex items-center gap-2 text-base font-medium text-slate-200 hover:text-purple transition-colors duration-150 px-3 py-1 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-purple/60"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            {navItem.icon && <span className="block sm:hidden">{navItem.icon}</span>}
+            <span className="!cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
-      
-      </motion.div>
+        <a href="#contact" className="ml-6">
+          <span className="inline-block bg-purple text-white font-semibold px-5 py-2 rounded-xl shadow-md hover:bg-purple/90 transition-colors duration-150 text-sm">Let's Connect</span>
+        </a>
+      </motion.nav>
     </AnimatePresence>
   );
 };
