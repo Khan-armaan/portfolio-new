@@ -77,14 +77,30 @@ export const projects = [
 
     img: "/kaitori.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/hono.svg","/prisma.svg","/postgresql.svg"],
-    link: "https://blog-sphere-ecru.vercel.app/signup",
+    link: "https://kaitorimybyte.com/",
+  },
+    {
+    id: 2,
+    title: "Custom POS Software",
+    des: " Developed a comprehensive POS system using React + Express with PostgreSQL backend and Docker Compose orchestration, implementing multitenant database indexing that accelerated heavy queries by 3x",
+
+    img: "/kaitori.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/hono.svg","/prisma.svg","/postgresql.svg"],
+    link: "https://pos.mybyte.store/",
+  },
+    {
+    id: 3,
+    title: "CorbettRoar.com",
+    des: " Corbett Roar Website - A simple website for booking jungle safaris and Corbett trips.",
+
+    img: "/kaitori.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/hono.svg","/prisma.svg","/postgresql.svg"],
+    link: "https://corbettroar.com/",
   },
   
   
-  
-  
   {
-    id: 1,
+    id: 4,
     title: "BlogSphere a Blogging website",
     des: "full-stack blogging platform with a serverless backend powered by Hono Cloudflare Workers anda responsive frontend",
     img: "/p1.png",
@@ -92,7 +108,7 @@ export const projects = [
     link: "https://blog-sphere-ecru.vercel.app/signup",
   },
   {
-    id: 2,
+    id:5,
     title: "Mystry Message a Messagigng web App",
     des: "Dive into the World of Anonymous Feedback",
     img: "/p2.png",
@@ -100,7 +116,7 @@ export const projects = [
     link: "https://mystrey-magic-app.vercel.app/",
   },
   {
-    id: 3,
+    id: 6,
     title: "Wallet web App",
     des: "A simple wallet web app with a responsive design and a NextJS Backend",
     img: "/p3.png",
@@ -108,7 +124,7 @@ export const projects = [
     link: "https://github.com/Khan-armaan/wallet-demo",
   },
   {
-    id: 4,
+    id: 7,
     title: "Portfolio website",
     des: "A portfolio website with NextJS and TailwindCSS",
     img: "/p4.png",
@@ -137,7 +153,11 @@ export const testimonials = [
       { name: "Prisma", icon: "/prisma.svg" },
       { name: "TypeScript", icon: "/ts.svg" },
       { name: "Express.js", icon: "/next.svg" },
-      
+      { name: "Redis", icon: "/next.svg" },
+       { name: "WebSockets", icon: "/next.svg" },
+        { name: "GRPC", icon: "/next.svg" },
+         { name: "JWT/OAuth", icon: "/next.svg" },
+         
     ]
   },
   {
@@ -148,16 +168,30 @@ export const testimonials = [
     ]
   },
   {
-    category: "Tools & Platforms",
+    category: "DevOps & Cloud",
     technologies: [
       { name: "Docker", icon: "/dock.svg" },
+      { name: "Docker", icon: "/dockerName.svg" },
+
+       { name: "AWS", icon: "/dockerName.svg" },
+        { name: "VPS", icon: "/dockerName.svg" },
+         { name: "Newrelic", icon: "/dockerName.svg" },
+          { name: "Prometheus", icon: "/dockerName.svg" },
+      { name: "Grafana", icon: "/dockerName.svg" },
+      { name: "Kubernetes", icon: "/dockerName.svg" }
+
+    ]
+  },
+   {
+    category: "Tools & Platforms",
+    technologies: [
       { name: "Vim", icon: "/vim.svg" },
       { name: "Turborepo", icon: "/turborepo-icon.svg" },
       { name: "Git", icon: "/git.svg" },
       { name: "Postman", icon: "/postman-icon.svg" },
       { name: "Bash", icon: "/bash.svg" },
       { name: "Github", icon: "/github.svg" },
-      { name: "Docker", icon: "/dockerName.svg" }
+   
       
     ]
   },
