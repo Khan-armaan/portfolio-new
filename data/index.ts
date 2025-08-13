@@ -70,6 +70,19 @@ export const gridItems = [
 ];
 
 export const projects = [
+    {
+    id: 1,
+    title: "Kaitori Mybyte",
+    des: " Architected a full-stack reselling platform using PostgreSQL, TypeScript, and Redis for OTP management and pub/sub messaging , Implementing WebSockets with Prisma ORM and deploying via Docker on AWS EC2, CI-based contract testing reduced integration bugs by 40%",
+
+    img: "/kaitori.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/hono.svg","/prisma.svg","/postgresql.svg"],
+    link: "https://blog-sphere-ecru.vercel.app/signup",
+  },
+  
+  
+  
+  
   {
     id: 1,
     title: "BlogSphere a Blogging website",
@@ -123,7 +136,8 @@ export const testimonials = [
       { name: "Hono", icon: "/hono.svg" },
       { name: "Prisma", icon: "/prisma.svg" },
       { name: "TypeScript", icon: "/ts.svg" },
-      { name: "Next.js", icon: "/next.svg" },
+      { name: "Express.js", icon: "/next.svg" },
+      
     ]
   },
   {
@@ -155,11 +169,21 @@ export const testimonials = [
 export const workExperience = [
   {
     id: 1,
-    title: "Full Stack Developer Intern",
-    desc: "Assisted in the development of a web-based platform and a mobile app using React.js and React Native, enhancing interactivity.",
+    title: "Software Developer Intern",
+    desc1: "Engineered a React Native + Express attendance module with real-time geolocation streaming via WebSockets, eliminating 95% of manual check-ins and saving 40+ hours weekly across 200+ employees",
+    desc2: "Developed a TypeScript React + Django e-commerce dashboard integrated with Google Auth, securing 1,000+ user accounts while automating CI/CD pipelines, reducing deployment time by 30%",
+    desc3: "  Orchestrated Git-based version control and CI/CD strategies across 5+ development projects, streamlining workflows and reducing code conflicts by 60%",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
-  }
+  },
+  {
+    id: 2,
+    title: "Freelance Software Developer",
+    desc1: " Architected a full-stack reselling platform using PostgreSQL, TypeScript, and Redis for OTP management and pub/sub messaging , Implementing WebSockets with Prisma ORM anddeploying via Docker on AWS EC2, CI-based contract testing reduced integration bugs by 40%",
+    desc2: "Developed a comprehensive POS system using React + Express with PostgreSQL backend and Docker Compose orchestration, implementing multitenant database indexing that accelerated heavy queries by 3x",
+    
+    thumbnail: "/exp1.svg",
+  },
 ];
 
 export const socialMedia = [
