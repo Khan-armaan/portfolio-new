@@ -72,35 +72,25 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        // max-w-7xl to w-screen
-        "scroller relative z-20 w-screen overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-screen overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          // change gap-16
-          " flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
           <li
-            //   change md:w-[450px] to md:w-[60vw] , px-8 py-6 to p-16, border-slate-700 to border-slate-800
-            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0
-             flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
+            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-white/10 p-5 md:p-16 md:w-[60vw] bg-gradient-to-br from-[#23263a]/80 to-[#181c2b]/90 backdrop-blur-xl shadow-xl hover:scale-[1.025] hover:shadow-2xl transition-all duration-300 animate-fade-in"
             style={{
-              //   background:
-              //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)", //remove this one
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+              boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.18)',
+              border: '1.5px solid rgba(255,255,255,0.10)',
             }}
-            // change to idx cuz we have the same name
             key={idx}
           >
             <blockquote>
@@ -108,25 +98,19 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              {/* change text color, text-lg */}
-              <span className=" relative z-20 text-xl  md:text-2xl leading-[1.6] text-white font-bold ">
+              <span className="relative z-20 text-xl md:text-2xl leading-[1.6] text-white font-bold ">
                 {item.category}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                {/* add this div for the profile img */}
-               
                 <span className="flex flex-col gap-1">
-                  {/* change text color, font-normal to font-bold, text-xl */}
-                  <span className="text-xl font-bold leading-[1.6] text-white">
-                 {item.technologies.map((tech, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                 <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
-                 <span>{tech.name}</span>
-                  </div>
-  ))}
-</span>
-                  {/* change text color */}
-                  
+                  {item.technologies.map((tech, i) => (
+                    <div key={i} className="flex items-center gap-2 group/tech hover:scale-105 transition-transform">
+                      <span className="inline-block rounded-full bg-gradient-to-br from-purple-500/60 to-blue-500/60 p-1 mr-2 shadow-md">
+                        <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
+                      </span>
+                      <span className="text-white text-lg font-semibold">{tech.name}</span>
+                    </div>
+                  ))}
                 </span>
               </div>
             </blockquote>

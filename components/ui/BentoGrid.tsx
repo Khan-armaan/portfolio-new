@@ -23,11 +23,18 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-6 lg:gap-10 mx-auto",
         className
       )}
+      style={{
+        position: 'relative',
+        zIndex: 2
+      }}
     >
+      {/* Animated gradient overlay for glassmorphism */}
+      <div className="pointer-events-none absolute inset-0 z-0 rounded-3xl overflow-hidden">
+        <div className="w-full h-full bg-gradient-to-br from-purple-900/30 via-blue-900/20 to-transparent animate-gradient-move blur-2xl opacity-60" />
+      </div>
       {children}
     </div>
   );
@@ -76,16 +83,12 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.12] group/bento shadow-xl dark:shadow-none justify-between flex flex-col space-y-4 bg-gradient-to-br from-[#23263a]/80 to-[#181c2b]/90 backdrop-blur-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl hover:border-purple/40 animate-fade-in",
         className
       )}
       style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.18)',
+        border: '1.5px solid rgba(255,255,255,0.10)',
       }}
     >
       {/* add img divs */}
