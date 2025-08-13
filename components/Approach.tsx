@@ -6,54 +6,40 @@ import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
-      <h1 className="heading">
-        My <span className="text-purple">approach</span>
-      </h1>
-      {/* remove bg-white dark:bg-black */}
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
-        {/* add des prop */}
+    <section className="w-full py-24 bg-[#23263a]" id="approach">
+      <h2 className="heading mb-2">
+        <span className="text-purple">My Process</span>
+      </h2>
+      <p className="text-center text-slate-400 max-w-2xl mx-auto mb-12 text-lg">
+        A proven, collaborative approach to building scalable, production-ready applications.
+      </p>
+      <div className="my-12 flex flex-col lg:flex-row items-center justify-center w-full gap-8">
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          title="Discovery & Strategy"
+          icon={<AceternityIcon order="01" />}
+          des="We define your goals, target users, and technical requirements to ensure a strong foundation for scalable growth."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
-            // add these classed for the border rounded overflowing -> rounded-3xl overflow-hidden
             containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
           />
         </Card>
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          title="Agile Development"
+          icon={<AceternityIcon order="02" />}
+          des="Iterative, transparent development with regular progress updates. I leverage modern frameworks and best practices for robust, maintainable code."
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            // change bg-black to bg-pink-900
             containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
-            colors={[
-              // change the colors of the
-              [255, 166, 158],
-              [221, 255, 247],
-            ]}
+            colors={[[255, 166, 158], [221, 255, 247]]}
             dotSize={2}
           />
-          {/* Radial gradient for the cute fade */}
-          {/* remove this one */}
-          {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title="Launch & Scale"
+          icon={<AceternityIcon order="03" />}
+          des="Seamless deployment, monitoring, and support. I ensure your product is ready for real-world scale and future growth."
         >
           <CanvasRevealEffect
             animationSpeed={3}

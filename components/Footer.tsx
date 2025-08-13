@@ -7,26 +7,24 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full pt-24 pb-10 bg-[#181c2b] relative" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 -bottom-72 min-h-96 pointer-events-none select-none">
         <img
           src="/footer-grid.svg"
           alt="grid"
-          className="w-full h-full opacity-50 "
+          className="w-full h-full opacity-40 "
         />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+      <div className="flex flex-col items-center z-10 relative">
+        <h2 className="heading lg:max-w-[45vw] mb-2">
+          <span className="text-purple">Let's build something scalable together.</span>
+        </h2>
+        <p className="text-slate-300 md:mt-8 my-4 text-center max-w-xl text-lg">
+          Ready to elevate your business with robust, scalable web solutions? Reach out and let's discuss how I can help you achieve your goals.
         </p>
-        <a href="">
+        <a href="mailto:armaankhanwork@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -34,19 +32,17 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-         Armaan khan
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center z-10 relative gap-4">
+        <p className="md:text-base text-sm md:font-normal font-light text-slate-400">
+          &copy; {new Date().getFullYear()} Armaan Khan. All rights reserved.
         </p>
-
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-           <Link href={info.link}>   <img src={info.img} alt="icons" width={20} height={20} /></Link> 
-            </div>
+            <Link key={info.id} href={info.link || '#'} target="_blank" rel="noopener noreferrer">
+              <div className="w-10 h-10 cursor-pointer flex justify-center items-center bg-black/60 rounded-lg border border-white/10 hover:bg-purple/30 transition-colors">
+                <img src={info.img} alt="icon" width={20} height={20} />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
