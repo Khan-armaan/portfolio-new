@@ -58,10 +58,10 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Armaan, a Full Stack Developer 
+            Hi! I&apos;m Armaan, a Software Developer 
           </p>
 
-          <a href="https://drive.google.com/file/d/1m64nVTQMoHm3kgOVol_CwnJ4CqQq3ij2/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1oRW_L30B5QkYfm3sczyzrQNtxY5AlqGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <MagicButton
               title="Download CV"
               icon={<FaLocationArrow />}

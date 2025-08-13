@@ -94,7 +94,7 @@ export const projects = [
 
     img: "/AIchat.png",
     iconLists: ["/re.svg", ,"/docker.svg","/aws-icon.svg","/postgresql.svg","/bash.svg", "/linux.svg", "/node.svg"],
-    link: "https://pos.mybyte.store/",
+    link: "http://ec2-15-206-90-250.ap-south-1.compute.amazonaws.com/",
   },
   
 
@@ -137,7 +137,7 @@ export const projects = [
     id: 8,
     title: "Portfolio website",
     des: "A portfolio website with NextJS and TailwindCSS",
-    img: "/p4.png",
+    img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg"],
     link: "",
   },
