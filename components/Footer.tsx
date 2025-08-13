@@ -19,12 +19,12 @@ const Footer = () => {
 
       <div className="flex flex-col items-center z-10 relative">
         <h2 className="heading lg:max-w-[45vw] mb-2">
-          <span className="text-purple">Let's build something scalable together.</span>
+         
         </h2>
         <p className="text-slate-300 md:mt-8 my-4 text-center max-w-xl text-lg">
           Ready to elevate your business with robust, scalable web solutions? Reach out and let's discuss how I can help you achieve your goals.
         </p>
-        <a href="mailto:armaankhanwork@gmail.com">
+        <a href="mailto:khanedu101@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center z-10 relative gap-4">
         <p className="md:text-base text-sm md:font-normal font-light text-slate-400">
-          &copy; {new Date().getFullYear()} Armaan Khan. All rights reserved.
+          &copy; {new Date().getFullYear()} Armaan Khan
         </p>
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (

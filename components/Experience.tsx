@@ -13,7 +13,7 @@ const Experience = () => {
       <p className="text-center text-slate-400 max-w-2xl mx-auto mb-12 text-lg">
         Proven track record delivering scalable, high-impact solutions for startups and established companies.
       </p>
-      <div className="w-full flex flex-col gap-10 items-center mt-8">
+  <div className="w-full flex flex-col gap-10 mt-8 px-4 md:px-12 lg:px-32">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -26,7 +26,7 @@ const Experience = () => {
             }}
             className="flex-1 text-white border-white/10 mt-0 bg-gradient-to-br from-[#23263a] to-[#181c2b] shadow-lg"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-6">
+            <div className="flex lg:flex-row flex-col lg:items-start p-3 py-6 md:p-5 lg:p-10 gap-6">
               <img
                 src={card.thumbnail}
                 alt={card.title}
