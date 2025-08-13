@@ -14,7 +14,7 @@ const RecentProjects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-32 mt-10">
        
         {projects.map((item) => (
           <Link href={item.link}   key={item.id} >

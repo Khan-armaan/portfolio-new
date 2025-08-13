@@ -73,9 +73,9 @@ export const projects = [
     {
     id: 1,
     title: "Kaitori Mybyte",
-    des: " Architected a full-stack reselling platform using PostgreSQL, TypeScript, and Redis for OTP management and pub/sub messaging , Implementing WebSockets with Prisma ORM and deploying via Docker on AWS EC2, CI-based contract testing reduced integration bugs by 40%",
+    des: " Architected a full-stack reselling platform using PostgreSQL, TypeScript, and Redis",
     img: "/kaitori.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/docker.svg","/prisma.svg","/postgresql.svg","/bash.svg","/git1.svg", "/linux.svg", "/node.svg"],
+    iconLists: ["/re.svg",  ,"/docker.svg","/postgresql.svg","/git1.svg", "/linux.svg", "/node.svg"],
     link: "https://kaitorimybyte.com/",
   },
     {
@@ -84,7 +84,7 @@ export const projects = [
     des: " Developed a comprehensive POS system using React + Express with PostgreSQL backend and Docker Compose orchestration, implementing multitenant database indexing that accelerated heavy queries by 3x",
 
     img: "/pos.png",
-   iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/docker.svg","/prisma.svg","/postgresql.svg","/bash.svg","/git1.svg", "/linux.svg", "/node.svg"],
+   iconLists: ["/re.svg", "/ts.svg","/docker.svg","/postgresql.svg", "/linux.svg", "/node.svg"],
     link: "https://pos.mybyte.store/",
   },
   {
@@ -93,7 +93,7 @@ export const projects = [
     des: "Built and deployed a full-stack AI platform enabling semantic PDF chat with 95%+ answer accuracy, reducing manual document queries by 80%, Parsed and chunked documents using LlamaCloud, then embedded content into a pgvector DB with Google Gemini API for high-precision vector search and real-time QA",
 
     img: "/AIchat.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/docker.svg","/prisma.svg","/aws-icon.svg","/postgresql.svg","/bash.svg","/git1.svg", "/linux.svg", "/node.svg"],
+    iconLists: ["/re.svg", ,"/docker.svg","/aws-icon.svg","/postgresql.svg","/bash.svg", "/linux.svg", "/node.svg"],
     link: "https://pos.mybyte.store/",
   },
   
