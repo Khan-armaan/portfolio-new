@@ -23,14 +23,14 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-200 max-w-80 mb-2 font-semibold">
-            Building Robust, Scalable, and Beautiful Digital Products
+            Building Robust and Scalable Digital Products
           </p>
           <TextGenerateEffect
-            words="I design & engineer scalable web applications that empower businesses to grow."
+            words="I engineer scalable web applications."
             className="text-center text-[2.5rem] md:text-5xl lg:text-6xl font-extrabold text-white mb-4"
           />
           <p className="text-center md:tracking-wider mb-6 text-base md:text-lg lg:text-2xl text-slate-300 max-w-2xl">
-            Hi, I'm <span className="text-purple font-bold">Armaan Khan</span> — a software engineer specializing in full-stack, cloud-native, and high-performance web solutions. I help startups and enterprises turn ideas into scalable, production-ready products.
+            Hi, I&apos;m <span className="text-purple font-bold">Armaan Khan</span> — a Software Developer specializing in full-stack, cloud-native, and high-performance web solutions.
           </p>
           <a href="https://drive.google.com/file/d/1oRW_L30B5QkYfm3sczyzrQNtxY5AlqGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <MagicButton

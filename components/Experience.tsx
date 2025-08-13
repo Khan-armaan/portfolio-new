@@ -3,6 +3,7 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -27,7 +28,7 @@ const Experience = () => {
             className="flex-1 text-white border-white/10 mt-0 bg-gradient-to-br from-[#23263a] to-[#181c2b] shadow-lg"
           >
             <div className="flex lg:flex-row flex-col lg:items-start p-3 py-6 md:p-5 lg:p-10 gap-6">
-              <img
+              <Image
                 src={card.thumbnail}
                 alt={card.title}
                 className="lg:w-32 md:w-20 w-16 rounded-xl shadow-md"

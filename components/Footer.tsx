@@ -4,13 +4,14 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="w-full pt-24 pb-10 bg-[#181c2b] relative" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96 pointer-events-none select-none">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-40 "
@@ -22,7 +23,7 @@ const Footer = () => {
          
         </h2>
         <p className="text-slate-300 md:mt-8 my-4 text-center max-w-xl text-lg">
-          Ready to elevate your business with robust, scalable web solutions? Reach out and let's discuss how I can help you achieve your goals.
+          Ready to elevate your business with robust, scalable web solutions? Reach out and let&apos;s discuss how I can help you achieve your goals.
         </p>
         <a href="mailto:khanedu101@gmail.com">
           <MagicButton
@@ -40,7 +41,7 @@ const Footer = () => {
           {socialMedia.map((info) => (
             <Link key={info.id} href={info.link || '#'} target="_blank" rel="noopener noreferrer">
               <div className="w-10 h-10 cursor-pointer flex justify-center items-center bg-black/60 rounded-lg border border-white/10 hover:bg-purple/30 transition-colors">
-                <img src={info.img} alt="icon" width={20} height={20} />
+                <Image src={info.img} alt="icon" width={20} height={20} />
               </div>
             </Link>
           ))}

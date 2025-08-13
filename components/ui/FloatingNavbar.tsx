@@ -72,7 +72,7 @@ import { cn } from "@/lib/utils";
           ))}
         </div>
         <a href="#contact" className="ml-2 sm:ml-6 flex-shrink-0">
-          <span className="inline-block bg-purple text-white font-semibold px-3 sm:px-5 py-2 rounded-xl shadow-md hover:bg-purple/90 transition-colors duration-150 text-xs sm:text-sm whitespace-nowrap">Let's Connect</span>
+          <span className="inline-block bg-purple text-white font-semibold px-3 sm:px-5 py-2 rounded-xl shadow-md hover:bg-purple/90 transition-colors duration-150 text-xs sm:text-sm whitespace-nowrap">Let&apos;s Connect</span>
         </a>
       </motion.nav>
     </AnimatePresence>

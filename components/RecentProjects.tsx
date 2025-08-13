@@ -6,6 +6,7 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -14,7 +15,7 @@ const RecentProjects = () => {
         <span className="text-purple">Featured Projects</span>
       </h2>
       <p className="text-center text-slate-400 max-w-2xl mx-auto mb-12 text-lg">
-        A curated selection of scalable, production-grade applications I've architected and delivered for startups and enterprises.
+        A curated selection of scalable, production-grade applications I&apos;ve architected and delivered for startups and enterprises.
       </p>
       <div className="flex flex-wrap items-stretch justify-center gap-12">
         {projects.map((item) => (
@@ -25,8 +26,8 @@ const RecentProjects = () => {
                 <div className="w-full h-full bg-gradient-to-br from-purple-900/30 via-blue-900/20 to-transparent animate-gradient-move blur-2xl opacity-60" />
               </div>
               <div className="relative w-full h-40 mb-6 rounded-2xl overflow-hidden flex items-center justify-center bg-[#13162D]">
-                <img src="/bg.png" alt="bgimg" className="absolute inset-0 w-full h-full object-cover opacity-30" />
-                <img src={item.img} alt={item.title} className="relative z-10 max-h-32 object-contain drop-shadow-lg" />
+                <Image src="/bg.png" alt="bgimg" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                <Image src={item.img} alt={item.title} className="relative z-10 max-h-32 object-contain drop-shadow-lg" />
               </div>
               <h3 className="font-bold text-xl text-white mb-2 text-center line-clamp-1">{item.title}</h3>
               <p className="text-slate-300 text-base font-normal mb-4 text-center line-clamp-3">{item.des}</p>
@@ -38,7 +39,7 @@ const RecentProjects = () => {
                       className="border border-white/10 rounded-full bg-black w-8 h-8 flex justify-center items-center shadow-md hover:scale-110 transition-transform"
                       style={{ transform: `translateX(-${4 * index}px)` }}
                     >
-                      <img src={icon} alt="tech" className="p-1 max-h-6 max-w-6" />
+                      <Image src={icon as string} alt="tech" className="p-1 max-h-6 max-w-6" />
                     </div>
                   ))}
                 </div>
